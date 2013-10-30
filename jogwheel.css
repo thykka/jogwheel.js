@@ -1,0 +1,18 @@
+/*
+//
+//  <>                T|           T|
+//                    ||           ||
+//  T| ,-.  ,-.TT\ T T||,\  ,-. ,-.||
+//  |||I \\|| I||I | |||´I||I )|I )||
+//  |||| |)|| |||| | ||| ||||/ ||/ ||
+//  ||\\_I/`\_I||L/L/´\| ||\\_/\\_/\|.js
+//  || `-´    ||       ` |/ `   `   `
+//  J´      ._/`         ´  thykka@gmail.com
+//
+*/
+
+.jogwheel {
+	white-space: nowrap;
+	overflow: hidden;
+	cursor: ew-resize;
+}

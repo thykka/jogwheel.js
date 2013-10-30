@@ -1,0 +1,42 @@
+<html>
+<link rel="stylesheet" type="text/css" href="../jogwheel.css"/>
+<head>
+<style>
+body {
+	margin: 0;
+}
+#slider {
+	width: 100%;
+	display: none;
+}
+</style>
+</head>
+<body>
+
+<div id="slider">
+	<img src="img/bn1.jpg" />
+	<img src="img/bn2.jpg" />
+	<img src="img/bn3.jpg" />
+	<img src="img/bn4.jpg" />
+	<img src="img/bn5.jpg" />
+	<img src="img/bn6.jpg" />
+	<img src="img/bn7.jpg" />
+</div>
+<div id="debug"></div>
+
+<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script src="http://codeorigin.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+
+<script src="../jogwheel.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	jogwheel.velocity = 30; // how much effect inertia has (bigger = more effect)
+	jogwheel.speed = 100;   // how fast does inertia decay (bigger = longer decay)
+	jogwheel.keyspeed = 400;// arrow keys transition duration
+	jogwheel.crawl = true;
+	jogwheel.makeJoggable($("#slider"));
+});
+</script>
+
+</body>
+</html>
