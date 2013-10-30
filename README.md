@@ -26,18 +26,20 @@ QUICKSTART
 ----------
 
 1. Place jogwheel.min.js and jogwheel.css into ./vnd/
-2. Add the following line to your <HEAD>
+2. Add the following line to your ```<HEAD>```
+
 ```
-    <link rel="stylesheet" type="text/css" href="vnd/jogwheel.css"/>
+<link rel="stylesheet" type="text/css" href="vnd/jogwheel.css"/>
 ```
-3. Add the following lines just before your </BODY>
+3. Add the following lines just before your ```</BODY>```
+
 ```
-    <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
-    <script src="http://codeorigin.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
-    <script src="vnd/jogwheel.min.js" type="text/javascript" charset="utf-8"></script>
-    <script type="text/javascript">$(document).ready(function() { jogwheel.makeJoggable($("#slider")); });</script>
+<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script src="http://codeorigin.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+<script src="vnd/jogwheel.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">$(document).ready(function() { jogwheel.makeJoggable($("#slider")); });</script>
 ```
->    (of course, if you already have jQuery on your site, you should omit the first line. Likewise, should you have jQuery-UI on your site, omit the second line as well)
+> (of course, if you already have jQuery on your site, you should omit the first line. Likewise, should you have jQuery-UI on your site, omit the second line as well)
 
 4. Change the "#slider" within the last line to match the ID of the element you wish to enhance. That's all!
 
@@ -52,21 +54,25 @@ jogwheel.velocity
 ```
 > integer, default: 50
 > Flick inertia amount. Smaller number means less inertia.
+
 ```
 jogwheel.speed
 ```
 > integer, default: 400
 > Flick inertia decay speed. Smaller number makes flicks stop faster
+
 ```
 jogwheel.keyspeed
 ```
 > integer, default: 100
 > Length of transition in milliseconds when using arrow keys to scroll
+
 ```
 jogwheel.crawlspeed
 ```
 > integer, default: 50
 > Controls the crawl speed by setting the delay between each pixel of crawling
+
 ```
 jogwheel.crawl
 ```
