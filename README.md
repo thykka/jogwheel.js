@@ -25,13 +25,13 @@ REQUIREMENTS
 QUICKSTART
 ----------
 
-1. Place jogwheel.min.js and jogwheel.css into ./vnd/
-2. Add the following line to your ```<HEAD>```
+- Place jogwheel.min.js and jogwheel.css into ./vnd/
+- Add the following line to your ```<HEAD>```
 
 ```
 <link rel="stylesheet" type="text/css" href="vnd/jogwheel.css"/>
 ```
-3. Add the following lines just before your ```</BODY>```
+- Add the following lines just before your ```</BODY>```
 
 ```
 <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
@@ -41,54 +41,49 @@ QUICKSTART
 ```
 > (of course, if you already have jQuery on your site, you should omit the first line. Likewise, should you have jQuery-UI on your site, omit the second line as well)
 
-4. Change the "#slider" within the last line to match the ID of the element you wish to enhance. That's all!
+- Change the "#slider" within the last line to match the ID of the element you wish to enhance. That's all!
 
 
 OPTIONS
 -------
 
-jogwheel.js has a few global options you can set to modify it's appearence.
+jogwheel.js has a few global options you can set to modify it's appearence. Values shown here are the defaults.
 These should be set before calling jogwheel.makeJoggable()
 ```
-jogwheel.velocity
+jogwheel.velocity = 50;
 ```
-> integer, default: 50
 > Flick inertia amount. Smaller number means less inertia.
 
 ```
-jogwheel.speed
+jogwheel.speed = 400;
 ```
-> integer, default: 400
 > Flick inertia decay speed. Smaller number makes flicks stop faster
 
 ```
-jogwheel.keyspeed
+jogwheel.keyspeed = 100;
 ```
-> integer, default: 100
 > Length of transition in milliseconds when using arrow keys to scroll
 
 ```
-jogwheel.crawlspeed
+jogwheel.crawlspeed = 50;
 ```
-> integer, default: 50
 > Controls the crawl speed by setting the delay between each pixel of crawling
 
 ```
-jogwheel.crawl
+jogwheel.crawl = false;
 ```
-> boolean, default: false
 > Autoscroll will be activated if set to true
 
 Example usage:
 ```
-    <script type="text/javascript">
-    $(document).ready(function() {
-        jogwheel.crawl = true;
-        jogwheel.keyspeed = 300;
-        jogwheel.speed = 100;
-        jogwheel.makeJoggable($("#slider"));
-    });
-    </script>
+<script type="text/javascript">
+$(document).ready(function() {
+  jogwheel.crawl = true;
+  jogwheel.keyspeed = 300;
+  jogwheel.speed = 100;
+  jogwheel.makeJoggable($("#slider"));
+});
+</script>
 ```
 
 VERSION NOTES
@@ -98,6 +93,11 @@ VERSION NOTES
 - Touch device navigation should work for devices which support it.
 - Multiple elements on one page can be jogwheeled, just initialize them all with jogwheel.makeJoggable(). Note that all jogwheeled elements are scrolled when arrow keys are pressed. This is an experimental feature.
 - Minimal testing has been performed. Should you encounter any bugs, please send a detailed report to thykka@gmail.com. At the very least, include your browser, operating system and any possible developer console output.
+
+TASKS
+-----
+- [ ] Remove the need to initialize by parsing through all elements with .jogwheel class.
+- [ ] Settings should be html parameters, instead of modifying the jogwheel object
 
 
 DISCLAIMER
