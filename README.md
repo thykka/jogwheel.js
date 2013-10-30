@@ -96,8 +96,8 @@ VERSION NOTES
 
 TASKS
 -----
-[ ] Remove the need to initialize by parsing through all elements with .jogwheel class.
-[ ] Settings should be html parameters, instead of modifying the jogwheel object
+- [ ] Remove the need to initialize by parsing through all elements with .jogwheel class.
+- [ ] Settings should be html parameters, instead of modifying the jogwheel object
 
 
 DISCLAIMER
