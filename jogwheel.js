@@ -16,8 +16,20 @@ var jogwheel = { // Global options
 	speed: 400,		// smaller value = faster inertia
 	keyspeed: 100,	// smaller value = faster transition
 	crawlspeed: 50, // smaller value = faster crawl
-	crawl: false	// initially crawling?
+	crawl: true	// initially crawling?
 };
+
+$(document).ready( function () {
+	$(".jogwheel").each( function () {
+		$(this).css({
+			"white-space": "nowrap",
+			"overflow": "hidden",
+			"cursor": "ew-resize"
+		});
+		jogwheel.makeJoggable($(this));
+	})
+});
+
 jogwheel.makeJoggable = function (e) {
 	var innerWidth;
 	e.fadeIn(300);
@@ -29,7 +41,7 @@ jogwheel.makeJoggable = function (e) {
 			jogwheel.stopCrawl(e);
 			e.stop();
 			if(event.type === "touchstart") {
-				e.clickX = event.originalEvent.touches[0].clientX;
+				e.clickX = event.originalEvent.touches[0].clientX || event.touches[0].clientX || event.clientX;
 			} else {
 				e.clickX = event.clientX;
 			}
