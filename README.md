@@ -25,30 +25,22 @@ REQUIREMENTS
 QUICKSTART
 ----------
 
-- Place jogwheel.min.js and jogwheel.css into ./vnd/
-- Add the following line to your ```<HEAD>```
-
-```
-<link rel="stylesheet" type="text/css" href="vnd/jogwheel.css"/>
-```
 - Add the following lines just before your ```</BODY>```
 
 ```
 <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
 <script src="http://codeorigin.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
 <script src="vnd/jogwheel.min.js" type="text/javascript" charset="utf-8"></script>
-<script type="text/javascript">$(document).ready(function() { jogwheel.makeJoggable($("#slider")); });</script>
 ```
 > (of course, if you already have jQuery on your site, you should omit the first line. Likewise, should you have jQuery-UI on your site, omit the second line as well)
 
-- Change the "#slider" within the last line to match the ID of the element you wish to enhance. That's all!
+- add class="jogwheel" to all the elements you wish to make jogwheel wrappers from.
 
 
 OPTIONS
 -------
 
 jogwheel.js has a few global options you can set to modify it's appearence. Values shown here are the defaults.
-These should be set before calling jogwheel.makeJoggable()
 ```
 jogwheel.velocity = 50;
 ```
@@ -81,7 +73,6 @@ $(document).ready(function() {
   jogwheel.crawl = true;
   jogwheel.keyspeed = 300;
   jogwheel.speed = 100;
-  jogwheel.makeJoggable($("#slider"));
 });
 </script>
 ```
@@ -96,7 +87,6 @@ VERSION NOTES
 
 TASKS
 -----
-- [ ] Remove the need to initialize by parsing through all elements with .jogwheel class.
 - [ ] Settings should be html parameters, instead of modifying the jogwheel object
 
 
