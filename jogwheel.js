@@ -18,7 +18,6 @@ var jogwheel = { // Global options
 	crawlspeed: 50, // smaller value = faster crawl
 	crawl: true	// initially crawling?
 };
-
 $(document).ready( function () {
 	$(".jogwheel").each( function () {
 		$(this).css({
@@ -29,7 +28,6 @@ $(document).ready( function () {
 		jogwheel.makeJoggable($(this));
 	})
 });
-
 jogwheel.makeJoggable = function (e) {
 	var innerWidth;
 	e.fadeIn(300);
@@ -41,20 +39,20 @@ jogwheel.makeJoggable = function (e) {
 			jogwheel.stopCrawl(e);
 			e.stop();
 			if(event.type === "touchstart") {
-				e.clickX = event.originalEvent.touches[0].clientX || event.touches[0].clientX || event.clientX;
+				e.clickX = event.originalEvent.touches[0].clientX || event.targetTouches[0].clientX || event.touches[0].clientX || event.clientX || event.pageX;
 			} else {
-				e.clickX = event.clientX;
+				e.clickX = event.pageX;
 			}
 			$(document).on("mousemove touchmove", function(event) {
 				event.preventDefault();
 				event.stopPropagation();
 				if(event.moveHandled !== true) {
 					if(event.type === "touchmove") {
-						e.delta = e.clickX - event.originalEvent.touches[0].clientX;
-						e.clickX = event.originalEvent.touches[0].clientX;
+						e.delta = e.clickX - (event.originalEvent.touches[0].clientX || event.targetTouches[0].clientX || event.touches[0].clientX || event.clientX || event.pageX);
+						e.clickX = event.originalEvent.touches[0].clientX || event.targetTouches[0].clientX || event.touches[0].clientX || event.clientX || event.pageX;
 					} else {
-						e.delta = e.clickX - event.clientX;
-						e.clickX = event.clientX;
+						e.delta = e.clickX - event.pageX;
+						e.clickX = event.pageX;
 					}
 					e.scrollLeft(e.scrollLeft()+e.delta);
 					event.moveHandled = true;
@@ -66,9 +64,6 @@ jogwheel.makeJoggable = function (e) {
 				event.preventDefault();
 				event.stopPropagation();
 				if(event.upHandled !== true) {
-					if(event.type === "touchend" || event.type === "touchcancel") {
-
-					}
 					$(document).off("mousemove").off("mouseup").off("touchmove").off("touchend").off("touchcancel");
 					if(e.delta > 1 || e.delta < -1) {
 						e.animate({
@@ -138,3 +133,10 @@ jogwheel.getWidth = function (element) {
 	element.children().children().unwrap();
 	return result;
 };
+
+jQuery.extend( jQuery.easing,
+{
+	def: 'easeOutExpo',
+	easeOutExpo:function(p,a,c,k,d){return (a==d)?c+k:k*(-Math.pow(2,-10*a/d)+1)+c;},
+	easeOutCirc:function(p,a,c,k,d){return k*Math.sqrt(1-(a=a/d-1)*a)+c;}
+});

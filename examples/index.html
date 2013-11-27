@@ -4,10 +4,18 @@
 body {
 	margin: 0;
 }
+@media screen and (max-width: 800px) {
+    .jogwheel img { height: 600px; width: auto; }
+}
+@media screen and (max-width: 500px) {
+    .jogwheel img { height: 400px; width: auto; }
+}
+@media screen and (max-width: 400px) {
+    .jogwheel img { height: 250px; width: auto; }
+}
 </style>
 </head>
 <body>
-
 <div class="jogwheel">
 	<img src="img/bn1.jpg" />
 	<img src="img/bn2.jpg" />
@@ -19,10 +27,9 @@ body {
 </div>
 <div id="debug"></div>
 
-<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
-<script src="http://codeorigin.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+<script src="//code.jquery.com/jquery-2.0.3.min.js"></script>
 
-<script src="../jogwheel.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../jogwheel.js" type="text/javascript" charset="utf-8"></script>
 
 </body>
 </html>
