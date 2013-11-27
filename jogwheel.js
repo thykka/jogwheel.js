@@ -39,7 +39,7 @@ jogwheel.makeJoggable = function (e) {
 			jogwheel.stopCrawl(e);
 			e.stop();
 			if(event.type === "touchstart") {
-				e.clickX = event.originalEvent.touches[0].clientX || event.targetTouches[0].clientX || event.touches[0].clientX || event.clientX || event.pageX;
+				e.clickX = event.originalEvent.touches[0].pageX || event.targetTouches[0].pageX || event.touches[0].pageX || event.pageX || event.pageX;
 			} else {
 				e.clickX = event.pageX;
 			}
@@ -48,8 +48,8 @@ jogwheel.makeJoggable = function (e) {
 				event.stopPropagation();
 				if(event.moveHandled !== true) {
 					if(event.type === "touchmove") {
-						e.delta = e.clickX - (event.originalEvent.touches[0].clientX || event.targetTouches[0].clientX || event.touches[0].clientX || event.clientX || event.pageX);
-						e.clickX = event.originalEvent.touches[0].clientX || event.targetTouches[0].clientX || event.touches[0].clientX || event.clientX || event.pageX;
+						e.delta = e.clickX - (event.originalEvent.touches[0].pageX || event.targetTouches[0].pageX || event.touches[0].pageX || event.pageX || event.pageX);
+						e.clickX = event.originalEvent.touches[0].pageX || event.targetTouches[0].pageX || event.touches[0].pageX || event.pageX || event.pageX;
 					} else {
 						e.delta = e.clickX - event.pageX;
 						e.clickX = event.pageX;
