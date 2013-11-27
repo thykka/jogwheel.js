@@ -19,20 +19,18 @@ REQUIREMENTS
 ------------
 
 - jQuery 2.0.3 (other versions might work too)
-- jQuery-UI (for easing. Not necessary if "easeOutCirc" and "easeOutExpo") are defined elsewhere.
 
 
 QUICKSTART
 ----------
 
-- Add the following lines just before your ```</BODY>```
+- Add the following lines at the end of your ```<BODY>```
 
 ```
-<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
-<script src="http://codeorigin.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+<script src="//code.jquery.com/jquery-2.0.3.min.js"></script>
 <script src="vnd/jogwheel.min.js" type="text/javascript" charset="utf-8"></script>
 ```
-> (of course, if you already have jQuery on your site, you should omit the first line. Likewise, should you have jQuery-UI on your site, omit the second line as well)
+> (of course, if you already have jQuery on your site, you should omit the first line.)
 
 - add class="jogwheel" to all the elements you wish to make jogwheel wrappers from.
 
@@ -82,13 +80,12 @@ VERSION NOTES
 
 - jogwheel.js was developed using Chrome. It's also been briefly tested with Firefox and IE 10. Arrow key navigation doesn't seem to work with IE.
 - Touch device navigation should work for devices which support it.
-- Multiple elements on one page can be jogwheeled, just initialize them all with jogwheel.makeJoggable(). Note that all jogwheeled elements are scrolled when arrow keys are pressed. This is an experimental feature.
 - Minimal testing has been performed. Should you encounter any bugs, please send a detailed report to thykka@gmail.com. At the very least, include your browser, operating system and any possible developer console output.
 
 TASKS
 -----
 - [ ] Settings should be html parameters, instead of modifying the jogwheel object
-
+- [ ] Ensure compatibility with mobile devices.
 
 DISCLAIMER
 ----------
