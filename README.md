@@ -91,3 +91,25 @@ DISCLAIMER
 ----------
 
 I don't care how you use this script. I really don't. Feel free to use it, modify it, derive from it, sell it, distribute it, print it out with a font size equivalent of a small cat, whatever. I'll appreciate it if you include this disclaimer when distributing the script, but in no way is that necessary either. I also take absolutely NO responsibility for ANY possible damage, data, profit or career loss, death, or anything else you might come up with. In other words: Should you choose to use this script or it's accompanying files in any way, you're operating SOLELY on your own responsibility.
+
+
+LICENSE
+-------
+
+<p xmlns:dct="http://purl.org/dc/terms/" xmlns:vcard="http://www.w3.org/2001/vcard-rdf/3.0#">
+  <a rel="license"
+     href="http://creativecommons.org/publicdomain/zero/1.0/">
+    <img src="http://i.creativecommons.org/p/zero/1.0/88x31.png" style="border-style: none;" alt="CC0" />
+  </a>
+  <br />
+  To the extent possible under law,
+  <a rel="dct:publisher"
+     href="http://thykka.github.io/jogwheel.js">
+    <span property="dct:title">Moses Holmström</span></a>
+  has waived all copyright and related or neighboring rights to
+  <span property="dct:title">Jogwheel.js</span>.
+This work is published from:
+<span property="vcard:Country" datatype="dct:ISO3166"
+      content="FI" about="http://thykka.github.io/jogwheel.js">
+  Finland</span>.
+</p>
