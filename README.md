@@ -113,3 +113,7 @@ This work is published from:
       content="FI" about="http://thykka.github.io/jogwheel.js">
   Finland</span>.
 </p>
+
+DONATIONS
+---------
+<a href="https://flattr.com/submit/auto?user_id=Thykka&url=https%3A%2F%2Fgithub.com%2Fthykka%2Fjogwheel.js" target="_blank"><img src="//api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0"></a>
